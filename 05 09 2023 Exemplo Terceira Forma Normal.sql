@@ -73,10 +73,39 @@ insert into pedido values(null, 1, 1);
 
 select * from  pedido;
 
+##1)Suponha uma tabela "Funcionários" com os atributos: ID do Funcionário (chave primária), Nome do
+##Funcionário, Departamento e Localização do Departamento (cidade e estado). Determine se esta tabela
+##está em 3FN e explique sua resposta.
 
+	##A tabela “Funcionários” não está em 3FN, pois a localização do departamento (cidade e estado) depende do departamento, que é um atributo não-chave.
+
+##2)Você tem uma tabela "Encomendas" com os seguintes atributos: Número da Encomenda (chave primária), ID do Cliente, 
+##Nome do Cliente, e Cidade de Entrega. Avalie se esta tabela está em 3FN ou não e explique seu raciocínio.
     
+    ##A tabela “Encomendas” também não está em 3FN, pois o nome do cliente depende do ID do cliente, que é um atributo não-chave. Isso cria uma dependência transitiva entre o número da encomenda, 
+    ##o ID do cliente e o nome do cliente.
     
+##3)Considere uma tabela "Produtos" com os atributos: ID do Produto (chave primária), Nome do Produto, Categoria do Produto e Nome do Fornecedor. 
+##Analise se esta tabela está em 3FN ou não e justifique sua resposta.
+
+	##A tabela “Produtos” está em 3FN, pois nenhum atributo não-chave depende de outro atributo não-chave. 
     
+##4)Dada uma tabela "Escolas" com os atributos: ID da Escola (chave primária), Nome da Escola, Nome do Diretor e Endereço do Diretor. 
+##Determine se esta tabela está em 3FN ou não, e forneça uma explicação.
+
+	##A tabela “Escolas” não está em 3FN, pois há uma dependência transitiva entre os atributos não-chave.
+    ##O endereço do diretor depende do nome do diretor, que depende do nome da escola, que depende do ID da escola
     
+##5)Suponha uma tabela "Pedidos" com os atributos: Número do Pedido (chave primária), Produto, ID 
+##do Cliente, Nome do Cliente e Estado do Cliente. Avalie se esta tabela está em 3FN ou não e explique por quê.
+
+	##A tabela “Pedidos” também não está em 3FN, pois há uma dependência transitiva entre os atributos não-chave. O nome do cliente e o estado do cliente dependem do ID do cliente, 
+    ##que depende do número do pedido, que é a chave primária.
+        
+##6)Você possui uma tabela "Projetos" com os seguintes atributos: ID do Projeto (chave primária), Nome do Projeto, ID do Gerente do Projeto, 
+##Nome do Gerente e Departamento do Gerente. Determine se esta tabela está em 3FN e justifique sua resposta.
+
+	##A tabela “Projetos” não está em 3FN, pois há uma dependência transitiva entre os atributos não-chave. 
+    ##O nome do gerente e o departamento do gerente dependem do ID do gerente, que depende do ID do projeto, que é a chave primária
     
 
